@@ -1,2 +1,11 @@
 # -
-The reversible data hiding algorithm of encrypted images based on bit plane compression
+基于位平面压缩的图像可逆信息隐藏算法（The reversible data hiding algorithm of encrypted images based on bit plane compression）
+
+在matlab中运行文件reversible_data_hiding_in_encrypted_medical_image.m，会出现程序各部分入口
+各部分运行结果如下：
+1.图像重构与加密：输入图像、图像加密密钥（没有输入会自动随机生成）；输出加密后的图像、图像加密密钥文本文件（Key.txt）和头部密钥文本文件（Key_head.txt）
+2.水印嵌入：输入加密后的图像，读取头部密钥文本文件（Key_head.txt），设置水印加密密钥（没有输入会自动随机生成），输入要嵌入的水印信息（支持读取txt文本）；输出嵌入水印的图像、数据嵌入密钥文本文件（Key_extract.txt）、数据嵌入密钥及水印加密密钥文本文件（Key_data.txt）、返回值序列文本文件（Key_feedback_value.txt）
+3.水印的读取与提取：输入嵌入水印的图像，输入数据嵌入密钥和返回值序列，点击提取水印可以从加密图像中提取出水印，得到提取出水印的图像；输入嵌入水印的图像，输入数据嵌入密钥及水印加密密钥、返回值序列，点击读取水印，可以从加密图像中读出水印信息；
+4.图像解密与复原：输入加密后的图像，输入图像加密密钥（Key.txt），得到解密复原后的图像
+
+本程序参考文献：郑洪英, 任雯, 程惠惠. 基于位平面压缩的密文医学图像可逆信息隐藏算法 [J]. 计算机应用, 2016, 36(11): 3088-3092. 
